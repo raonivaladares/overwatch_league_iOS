@@ -1,0 +1,6 @@
+os: osx
+language: Swift
+osx_image: xcode11.3
+xcode_project: overwatch_league_iOS.xcodeproj
+xcode_scheme: overwatch_league_iOS
+xcode_sdk: iphonesimulator13.2
