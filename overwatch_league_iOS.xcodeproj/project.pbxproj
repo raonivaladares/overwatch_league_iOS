@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8485560223CA3AF200CACC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560123CA3AF200CACC76 /* AppDelegate.swift */; };
+		8485560423CA3AF200CACC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560323CA3AF200CACC76 /* SceneDelegate.swift */; };
+		8485560623CA3AF200CACC76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560523CA3AF200CACC76 /* ContentView.swift */; };
+		8485560823CA3AF400CACC76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8485560723CA3AF400CACC76 /* Assets.xcassets */; };
+		8485560B23CA3AF400CACC76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8485560A23CA3AF400CACC76 /* Preview Assets.xcassets */; };
+		8485560E23CA3AF400CACC76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8485560C23CA3AF400CACC76 /* LaunchScreen.storyboard */; };
+		8485561923CA3AF400CACC76 /* overwatch_league_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485561823CA3AF400CACC76 /* overwatch_league_iOSTests.swift */; };
+		8485562423CA3AF400CACC76 /* overwatch_league_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485562323CA3AF400CACC76 /* overwatch_league_iOSUITests.swift */; };
+		8485563323CA3D0F00CACC76 /* WebServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485563223CA3D0F00CACC76 /* WebServiceConfiguration.swift */; };
+		8485563523CA3D3A00CACC76 /* OverwatchLeagueWebServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485563423CA3D3A00CACC76 /* OverwatchLeagueWebServiceConfiguration.swift */; };
+		8485563823CA408A00CACC76 /* OverwatchLeagueWebServiceConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485563723CA408A00CACC76 /* OverwatchLeagueWebServiceConfigurationTests.swift */; };
+		8485563A23CA43CF00CACC76 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485563923CA43CF00CACC76 /* URLBuilder.swift */; };
+		8485563C23CA444900CACC76 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485563B23CA444900CACC76 /* HTTPMethod.swift */; };
+		8485564023CA473100CACC76 /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485563F23CA473100CACC76 /* HTTPMethodTests.swift */; };
+		8485564323CA491200CACC76 /* WebServiceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485564223CA491200CACC76 /* WebServiceAction.swift */; };
+		8485564523CA4AAA00CACC76 /* WebServiceActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485564423CA4AAA00CACC76 /* WebServiceActions.swift */; };
+		8485564823CA4B1E00CACC76 /* WebServiceActions+GetStandingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485564723CA4B1E00CACC76 /* WebServiceActions+GetStandingsTests.swift */; };
+		8485564A23CA4D4800CACC76 /* URLRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485564923CA4D4800CACC76 /* URLRequestBuilderTests.swift */; };
+		8485564C23CA587A00CACC76 /* RequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485564B23CA587A00CACC76 /* RequestExecuter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8485561523CA3AF400CACC76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 848555F623CA3AF200CACC76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 848555FD23CA3AF200CACC76;
+			remoteInfo = overwatch_league_iOS;
+		};
+		8485562023CA3AF400CACC76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 848555F623CA3AF200CACC76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 848555FD23CA3AF200CACC76;
+			remoteInfo = overwatch_league_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		848555FE23CA3AF200CACC76 /* overwatch_league_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = overwatch_league_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8485560123CA3AF200CACC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8485560323CA3AF200CACC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8485560523CA3AF200CACC76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8485560723CA3AF400CACC76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8485560A23CA3AF400CACC76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8485560D23CA3AF400CACC76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8485560F23CA3AF400CACC76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8485561423CA3AF400CACC76 /* overwatch_league_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = overwatch_league_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8485561823CA3AF400CACC76 /* overwatch_league_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overwatch_league_iOSTests.swift; sourceTree = "<group>"; };
+		8485561A23CA3AF400CACC76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8485561F23CA3AF400CACC76 /* overwatch_league_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = overwatch_league_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8485562323CA3AF400CACC76 /* overwatch_league_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overwatch_league_iOSUITests.swift; sourceTree = "<group>"; };
+		8485562523CA3AF400CACC76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8485563223CA3D0F00CACC76 /* WebServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConfiguration.swift; sourceTree = "<group>"; };
+		8485563423CA3D3A00CACC76 /* OverwatchLeagueWebServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverwatchLeagueWebServiceConfiguration.swift; sourceTree = "<group>"; };
+		8485563723CA408A00CACC76 /* OverwatchLeagueWebServiceConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverwatchLeagueWebServiceConfigurationTests.swift; sourceTree = "<group>"; };
+		8485563923CA43CF00CACC76 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		8485563B23CA444900CACC76 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		8485563F23CA473100CACC76 /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
+		8485564223CA491200CACC76 /* WebServiceAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAction.swift; sourceTree = "<group>"; };
+		8485564423CA4AAA00CACC76 /* WebServiceActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceActions.swift; sourceTree = "<group>"; };
+		8485564723CA4B1E00CACC76 /* WebServiceActions+GetStandingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebServiceActions+GetStandingsTests.swift"; sourceTree = "<group>"; };
+		8485564923CA4D4800CACC76 /* URLRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilderTests.swift; sourceTree = "<group>"; };
+		8485564B23CA587A00CACC76 /* RequestExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecuter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		848555FB23CA3AF200CACC76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8485561123CA3AF400CACC76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8485561C23CA3AF400CACC76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		848555F523CA3AF200CACC76 = {
+			isa = PBXGroup;
+			children = (
+				8485560023CA3AF200CACC76 /* overwatch_league_iOS */,
+				8485561723CA3AF400CACC76 /* overwatch_league_iOSTests */,
+				8485562223CA3AF400CACC76 /* overwatch_league_iOSUITests */,
+				848555FF23CA3AF200CACC76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		848555FF23CA3AF200CACC76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				848555FE23CA3AF200CACC76 /* overwatch_league_iOS.app */,
+				8485561423CA3AF400CACC76 /* overwatch_league_iOSTests.xctest */,
+				8485561F23CA3AF400CACC76 /* overwatch_league_iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8485560023CA3AF200CACC76 /* overwatch_league_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8485563123CA3C8100CACC76 /* NetworkPlataform */,
+				8485560123CA3AF200CACC76 /* AppDelegate.swift */,
+				8485560323CA3AF200CACC76 /* SceneDelegate.swift */,
+				8485560523CA3AF200CACC76 /* ContentView.swift */,
+				8485560723CA3AF400CACC76 /* Assets.xcassets */,
+				8485560C23CA3AF400CACC76 /* LaunchScreen.storyboard */,
+				8485560F23CA3AF400CACC76 /* Info.plist */,
+				8485560923CA3AF400CACC76 /* Preview Content */,
+			);
+			path = overwatch_league_iOS;
+			sourceTree = "<group>";
+		};
+		8485560923CA3AF400CACC76 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8485560A23CA3AF400CACC76 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8485561723CA3AF400CACC76 /* overwatch_league_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8485563623CA3EA000CACC76 /* NetworkPlatform */,
+				8485561823CA3AF400CACC76 /* overwatch_league_iOSTests.swift */,
+				8485561A23CA3AF400CACC76 /* Info.plist */,
+			);
+			path = overwatch_league_iOSTests;
+			sourceTree = "<group>";
+		};
+		8485562223CA3AF400CACC76 /* overwatch_league_iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8485562323CA3AF400CACC76 /* overwatch_league_iOSUITests.swift */,
+				8485562523CA3AF400CACC76 /* Info.plist */,
+			);
+			path = overwatch_league_iOSUITests;
+			sourceTree = "<group>";
+		};
+		8485563123CA3C8100CACC76 /* NetworkPlataform */ = {
+			isa = PBXGroup;
+			children = (
+				8485564123CA490600CACC76 /* Actions */,
+				8485563D23CA468C00CACC76 /* Configuration */,
+				8485563923CA43CF00CACC76 /* URLBuilder.swift */,
+				8485563B23CA444900CACC76 /* HTTPMethod.swift */,
+				8485564B23CA587A00CACC76 /* RequestExecuter.swift */,
+			);
+			path = NetworkPlataform;
+			sourceTree = "<group>";
+		};
+		8485563623CA3EA000CACC76 /* NetworkPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				8485564623CA4AE400CACC76 /* Actions */,
+				8485563E23CA46BF00CACC76 /* Configuration */,
+				8485563F23CA473100CACC76 /* HTTPMethodTests.swift */,
+				8485564923CA4D4800CACC76 /* URLRequestBuilderTests.swift */,
+			);
+			path = NetworkPlatform;
+			sourceTree = "<group>";
+		};
+		8485563D23CA468C00CACC76 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8485563223CA3D0F00CACC76 /* WebServiceConfiguration.swift */,
+				8485563423CA3D3A00CACC76 /* OverwatchLeagueWebServiceConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8485563E23CA46BF00CACC76 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8485563723CA408A00CACC76 /* OverwatchLeagueWebServiceConfigurationTests.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8485564123CA490600CACC76 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				8485564223CA491200CACC76 /* WebServiceAction.swift */,
+				8485564423CA4AAA00CACC76 /* WebServiceActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		8485564623CA4AE400CACC76 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				8485564723CA4B1E00CACC76 /* WebServiceActions+GetStandingsTests.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		848555FD23CA3AF200CACC76 /* overwatch_league_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8485562823CA3AF400CACC76 /* Build configuration list for PBXNativeTarget "overwatch_league_iOS" */;
+			buildPhases = (
+				848555FA23CA3AF200CACC76 /* Sources */,
+				848555FB23CA3AF200CACC76 /* Frameworks */,
+				848555FC23CA3AF200CACC76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = overwatch_league_iOS;
+			productName = overwatch_league_iOS;
+			productReference = 848555FE23CA3AF200CACC76 /* overwatch_league_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8485561323CA3AF400CACC76 /* overwatch_league_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8485562B23CA3AF400CACC76 /* Build configuration list for PBXNativeTarget "overwatch_league_iOSTests" */;
+			buildPhases = (
+				8485561023CA3AF400CACC76 /* Sources */,
+				8485561123CA3AF400CACC76 /* Frameworks */,
+				8485561223CA3AF400CACC76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8485561623CA3AF400CACC76 /* PBXTargetDependency */,
+			);
+			name = overwatch_league_iOSTests;
+			productName = overwatch_league_iOSTests;
+			productReference = 8485561423CA3AF400CACC76 /* overwatch_league_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8485561E23CA3AF400CACC76 /* overwatch_league_iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8485562E23CA3AF400CACC76 /* Build configuration list for PBXNativeTarget "overwatch_league_iOSUITests" */;
+			buildPhases = (
+				8485561B23CA3AF400CACC76 /* Sources */,
+				8485561C23CA3AF400CACC76 /* Frameworks */,
+				8485561D23CA3AF400CACC76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8485562123CA3AF400CACC76 /* PBXTargetDependency */,
+			);
+			name = overwatch_league_iOSUITests;
+			productName = overwatch_league_iOSUITests;
+			productReference = 8485561F23CA3AF400CACC76 /* overwatch_league_iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		848555F623CA3AF200CACC76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = rov;
+				TargetAttributes = {
+					848555FD23CA3AF200CACC76 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					8485561323CA3AF400CACC76 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 848555FD23CA3AF200CACC76;
+					};
+					8485561E23CA3AF400CACC76 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 848555FD23CA3AF200CACC76;
+					};
+				};
+			};
+			buildConfigurationList = 848555F923CA3AF200CACC76 /* Build configuration list for PBXProject "overwatch_league_iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 848555F523CA3AF200CACC76;
+			productRefGroup = 848555FF23CA3AF200CACC76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				848555FD23CA3AF200CACC76 /* overwatch_league_iOS */,
+				8485561323CA3AF400CACC76 /* overwatch_league_iOSTests */,
+				8485561E23CA3AF400CACC76 /* overwatch_league_iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		848555FC23CA3AF200CACC76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8485560E23CA3AF400CACC76 /* LaunchScreen.storyboard in Resources */,
+				8485560B23CA3AF400CACC76 /* Preview Assets.xcassets in Resources */,
+				8485560823CA3AF400CACC76 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8485561223CA3AF400CACC76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8485561D23CA3AF400CACC76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		848555FA23CA3AF200CACC76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8485560223CA3AF200CACC76 /* AppDelegate.swift in Sources */,
+				8485560423CA3AF200CACC76 /* SceneDelegate.swift in Sources */,
+				8485564523CA4AAA00CACC76 /* WebServiceActions.swift in Sources */,
+				8485563C23CA444900CACC76 /* HTTPMethod.swift in Sources */,
+				8485560623CA3AF200CACC76 /* ContentView.swift in Sources */,
+				8485563A23CA43CF00CACC76 /* URLBuilder.swift in Sources */,
+				8485564C23CA587A00CACC76 /* RequestExecuter.swift in Sources */,
+				8485563523CA3D3A00CACC76 /* OverwatchLeagueWebServiceConfiguration.swift in Sources */,
+				8485564323CA491200CACC76 /* WebServiceAction.swift in Sources */,
+				8485563323CA3D0F00CACC76 /* WebServiceConfiguration.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8485561023CA3AF400CACC76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8485564023CA473100CACC76 /* HTTPMethodTests.swift in Sources */,
+				8485564823CA4B1E00CACC76 /* WebServiceActions+GetStandingsTests.swift in Sources */,
+				8485563823CA408A00CACC76 /* OverwatchLeagueWebServiceConfigurationTests.swift in Sources */,
+				8485561923CA3AF400CACC76 /* overwatch_league_iOSTests.swift in Sources */,
+				8485564A23CA4D4800CACC76 /* URLRequestBuilderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8485561B23CA3AF400CACC76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8485562423CA3AF400CACC76 /* overwatch_league_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8485561623CA3AF400CACC76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 848555FD23CA3AF200CACC76 /* overwatch_league_iOS */;
+			targetProxy = 8485561523CA3AF400CACC76 /* PBXContainerItemProxy */;
+		};
+		8485562123CA3AF400CACC76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 848555FD23CA3AF200CACC76 /* overwatch_league_iOS */;
+			targetProxy = 8485562023CA3AF400CACC76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8485560C23CA3AF400CACC76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8485560D23CA3AF400CACC76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8485562623CA3AF400CACC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8485562723CA3AF400CACC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8485562923CA3AF400CACC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"overwatch_league_iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = overwatch_league_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rov.overwatch-league-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8485562A23CA3AF400CACC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"overwatch_league_iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = overwatch_league_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rov.overwatch-league-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8485562C23CA3AF400CACC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = overwatch_league_iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rov.overwatch-league-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/overwatch_league_iOS.app/overwatch_league_iOS";
+			};
+			name = Debug;
+		};
+		8485562D23CA3AF400CACC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = overwatch_league_iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rov.overwatch-league-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/overwatch_league_iOS.app/overwatch_league_iOS";
+			};
+			name = Release;
+		};
+		8485562F23CA3AF400CACC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = overwatch_league_iOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rov.overwatch-league-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = overwatch_league_iOS;
+			};
+			name = Debug;
+		};
+		8485563023CA3AF400CACC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = overwatch_league_iOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rov.overwatch-league-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = overwatch_league_iOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		848555F923CA3AF200CACC76 /* Build configuration list for PBXProject "overwatch_league_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8485562623CA3AF400CACC76 /* Debug */,
+				8485562723CA3AF400CACC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8485562823CA3AF400CACC76 /* Build configuration list for PBXNativeTarget "overwatch_league_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8485562923CA3AF400CACC76 /* Debug */,
+				8485562A23CA3AF400CACC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8485562B23CA3AF400CACC76 /* Build configuration list for PBXNativeTarget "overwatch_league_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8485562C23CA3AF400CACC76 /* Debug */,
+				8485562D23CA3AF400CACC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8485562E23CA3AF400CACC76 /* Build configuration list for PBXNativeTarget "overwatch_league_iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8485562F23CA3AF400CACC76 /* Debug */,
+				8485563023CA3AF400CACC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 848555F623CA3AF200CACC76 /* Project object */;
+}
