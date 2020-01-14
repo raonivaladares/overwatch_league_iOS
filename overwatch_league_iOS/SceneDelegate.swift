@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 configuration: OverwatchLeagueWebServiceConfiguration()
             ).build()
             
-            RequestExecuterImp().execute(
+            RequestExecuterImp(urlSession: URLSession.shared).execute(
                 with: urlRquest!,
                 completion: {_ in }
             )

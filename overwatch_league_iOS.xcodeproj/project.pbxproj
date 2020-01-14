@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8423D2F023CD49CE008D77BE /* RequestExecuterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423D2EF23CD49CE008D77BE /* RequestExecuterImpTests.swift */; };
 		8485560223CA3AF200CACC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560123CA3AF200CACC76 /* AppDelegate.swift */; };
 		8485560423CA3AF200CACC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560323CA3AF200CACC76 /* SceneDelegate.swift */; };
 		8485560623CA3AF200CACC76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560523CA3AF200CACC76 /* ContentView.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8423D2EF23CD49CE008D77BE /* RequestExecuterImpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecuterImpTests.swift; sourceTree = "<group>"; };
 		848555FE23CA3AF200CACC76 /* overwatch_league_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = overwatch_league_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8485560123CA3AF200CACC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8485560323CA3AF200CACC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				8485563E23CA46BF00CACC76 /* Configuration */,
 				8485563F23CA473100CACC76 /* HTTPMethodTests.swift */,
 				8485564923CA4D4800CACC76 /* URLRequestBuilderTests.swift */,
+				8423D2EF23CD49CE008D77BE /* RequestExecuterImpTests.swift */,
 			);
 			path = NetworkPlatform;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				8485564023CA473100CACC76 /* HTTPMethodTests.swift in Sources */,
 				8485564823CA4B1E00CACC76 /* WebServiceActions+GetStandingsTests.swift in Sources */,
 				8485563823CA408A00CACC76 /* OverwatchLeagueWebServiceConfigurationTests.swift in Sources */,
+				8423D2F023CD49CE008D77BE /* RequestExecuterImpTests.swift in Sources */,
 				8485561923CA3AF400CACC76 /* overwatch_league_iOSTests.swift in Sources */,
 				8485564A23CA4D4800CACC76 /* URLRequestBuilderTests.swift in Sources */,
 			);

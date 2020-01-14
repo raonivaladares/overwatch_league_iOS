@@ -12,13 +12,17 @@ protocol RequestExecuter {
 }
 
 final class RequestExecuterImp: RequestExecuter {
+    private let urlSession: URLSession
+    
+    init(urlSession: URLSession) {
+        self.urlSession = urlSession
+    }
+    
     func execute(
         with urlRquest: URLRequest,
         completion: @escaping (Result<Data, NetworkPlataformError>) -> Void) {
         
-        let session = URLSession.shared
-        
-        session.dataTask(with: urlRquest) { data, urlResponse, error in
+        urlSession.dataTask(with: urlRquest) { data, urlResponse, error in
             if let data = data {
                 print("--------------------------")
                 print("DATA")
@@ -41,18 +45,6 @@ final class RequestExecuterImp: RequestExecuter {
             }
         }.resume()
     }
-        
-//        session.dataTask (with: url) { data, response, error in
-//            print("Entered the completionHandler")
-//            guard let httpResponse = response as? HTTPURLResponse else {
-//                return
-//            }
-////            print("Request with url: \(components.url!)")
-//            print("Request result: \(httpResponse.statusCode)")
-//            print("Request response: \(response)")
-//
-//        }.resume()
-//    }
 }
 
 
