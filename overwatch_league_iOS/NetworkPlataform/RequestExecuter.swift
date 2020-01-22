@@ -43,8 +43,26 @@ final class RequestExecuterImp: RequestExecuter {
                 print(error)
                 print("--------------------------")
             }
+            completion(.failure(.unkown))
         }.resume()
+    }
+    
+    private func parseResponse(response: URLResponse) -> NetworkPlataformrError? {
+        if let response = response as? HTTPURLResponse {
+            switch response.statusCode {
+            case 200...299:
+                return nil
+            default:
+                return NetworkPlataformrError.unkown
+            }
+        }
+        
+        return NetworkPlataformrError.unkown
     }
 }
 
-
+final class urlResponseErrorParser {
+    init() {
+        
+    }
+}
