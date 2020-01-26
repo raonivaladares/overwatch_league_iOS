@@ -3,11 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		843836DE23D7E9EC00584CE2 /* NetworkPlataformrError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836DD23D7E9EC00584CE2 /* NetworkPlataformrError.swift */; };
+		843836DE23D7E9EC00584CE2 /* NetworkPlataformError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836DD23D7E9EC00584CE2 /* NetworkPlataformError.swift */; };
+		843836E023DCDD3A00584CE2 /* URLResponseErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836DF23DCDD3A00584CE2 /* URLResponseErrorParser.swift */; };
+		843836E223DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836E123DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift */; };
+		843836EA23DCE4EB00584CE2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843836E823DCE4EB00584CE2 /* Quick.framework */; };
+		843836EB23DCE4EB00584CE2 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 843836E823DCE4EB00584CE2 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		843836EC23DCE4EB00584CE2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843836E923DCE4EB00584CE2 /* Nimble.framework */; };
+		843836ED23DCE4EB00584CE2 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 843836E923DCE4EB00584CE2 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		843836F223DD34D400584CE2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843836E923DCE4EB00584CE2 /* Nimble.framework */; platformFilter = ios; };
+		843836F323DD34D400584CE2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843836E823DCE4EB00584CE2 /* Quick.framework */; platformFilter = ios; };
 		8485560223CA3AF200CACC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560123CA3AF200CACC76 /* AppDelegate.swift */; };
 		8485560423CA3AF200CACC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560323CA3AF200CACC76 /* SceneDelegate.swift */; };
 		8485560623CA3AF200CACC76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485560523CA3AF200CACC76 /* ContentView.swift */; };
@@ -46,8 +54,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		843836EE23DCE4EB00584CE2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				843836EB23DCE4EB00584CE2 /* Quick.framework in Embed Frameworks */,
+				843836ED23DCE4EB00584CE2 /* Nimble.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		843836DD23D7E9EC00584CE2 /* NetworkPlataformrError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlataformrError.swift; sourceTree = "<group>"; };
+		843836DD23D7E9EC00584CE2 /* NetworkPlataformError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlataformError.swift; sourceTree = "<group>"; };
+		843836DF23DCDD3A00584CE2 /* URLResponseErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponseErrorParser.swift; sourceTree = "<group>"; };
+		843836E123DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponseErrorParserSpec.swift; sourceTree = "<group>"; };
+		843836E423DCE4A600584CE2 /* Nimble.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Nimble.framework.dSYM; path = Carthage/Build/iOS/Nimble.framework.dSYM; sourceTree = "<group>"; };
+		843836E523DCE4BF00584CE2 /* Quick.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Quick.framework.dSYM; path = Carthage/Build/iOS/Quick.framework.dSYM; sourceTree = "<group>"; };
+		843836E623DCE4CD00584CE2 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		843836E823DCE4EB00584CE2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		843836E923DCE4EB00584CE2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		848555FE23CA3AF200CACC76 /* overwatch_league_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = overwatch_league_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8485560123CA3AF200CACC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8485560323CA3AF200CACC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843836EA23DCE4EB00584CE2 /* Quick.framework in Frameworks */,
+				843836EC23DCE4EB00584CE2 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843836F223DD34D400584CE2 /* Nimble.framework in Frameworks */,
+				843836F323DD34D400584CE2 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +134,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843836E323DCE4A600584CE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				843836E923DCE4EB00584CE2 /* Nimble.framework */,
+				843836E823DCE4EB00584CE2 /* Quick.framework */,
+				843836E623DCE4CD00584CE2 /* QuickLook.framework */,
+				843836E523DCE4BF00584CE2 /* Quick.framework.dSYM */,
+				843836E423DCE4A600584CE2 /* Nimble.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		848555F523CA3AF200CACC76 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +153,7 @@
 				8485561723CA3AF400CACC76 /* overwatch_league_iOSTests */,
 				8485562223CA3AF400CACC76 /* overwatch_league_iOSUITests */,
 				848555FF23CA3AF200CACC76 /* Products */,
+				843836E323DCE4A600584CE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,7 +217,8 @@
 				8485563923CA43CF00CACC76 /* URLBuilder.swift */,
 				8485563B23CA444900CACC76 /* HTTPMethod.swift */,
 				8485564B23CA587A00CACC76 /* RequestExecuter.swift */,
-				843836DD23D7E9EC00584CE2 /* NetworkPlataformrError.swift */,
+				843836DD23D7E9EC00584CE2 /* NetworkPlataformError.swift */,
+				843836DF23DCDD3A00584CE2 /* URLResponseErrorParser.swift */,
 			);
 			path = NetworkPlataform;
 			sourceTree = "<group>";
@@ -182,6 +230,7 @@
 				8485563E23CA46BF00CACC76 /* Configuration */,
 				8485563F23CA473100CACC76 /* HTTPMethodTests.swift */,
 				8485564923CA4D4800CACC76 /* URLRequestBuilderTests.swift */,
+				843836E123DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift */,
 			);
 			path = NetworkPlatform;
 			sourceTree = "<group>";
@@ -230,6 +279,7 @@
 				848555FA23CA3AF200CACC76 /* Sources */,
 				848555FB23CA3AF200CACC76 /* Frameworks */,
 				848555FC23CA3AF200CACC76 /* Resources */,
+				843836EE23DCE4EB00584CE2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,12 +403,13 @@
 			files = (
 				8485560223CA3AF200CACC76 /* AppDelegate.swift in Sources */,
 				8485560423CA3AF200CACC76 /* SceneDelegate.swift in Sources */,
-				843836DE23D7E9EC00584CE2 /* NetworkPlataformrError.swift in Sources */,
+				843836DE23D7E9EC00584CE2 /* NetworkPlataformError.swift in Sources */,
 				8485564523CA4AAA00CACC76 /* WebServiceActions.swift in Sources */,
 				8485563C23CA444900CACC76 /* HTTPMethod.swift in Sources */,
 				8485560623CA3AF200CACC76 /* ContentView.swift in Sources */,
 				8485563A23CA43CF00CACC76 /* URLBuilder.swift in Sources */,
 				8485564C23CA587A00CACC76 /* RequestExecuter.swift in Sources */,
+				843836E023DCDD3A00584CE2 /* URLResponseErrorParser.swift in Sources */,
 				8485563523CA3D3A00CACC76 /* OverwatchLeagueWebServiceConfiguration.swift in Sources */,
 				8485564323CA491200CACC76 /* WebServiceAction.swift in Sources */,
 				8485563323CA3D0F00CACC76 /* WebServiceConfiguration.swift in Sources */,
@@ -373,6 +424,7 @@
 				8485564823CA4B1E00CACC76 /* WebServiceActions+GetStandingsTests.swift in Sources */,
 				8485563823CA408A00CACC76 /* OverwatchLeagueWebServiceConfigurationTests.swift in Sources */,
 				8485561923CA3AF400CACC76 /* overwatch_league_iOSTests.swift in Sources */,
+				843836E223DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift in Sources */,
 				8485564A23CA4D4800CACC76 /* URLRequestBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +500,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -533,6 +586,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"overwatch_league_iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = overwatch_league_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -552,6 +609,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"overwatch_league_iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = overwatch_league_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,6 +631,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = overwatch_league_iOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -591,6 +656,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = overwatch_league_iOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
