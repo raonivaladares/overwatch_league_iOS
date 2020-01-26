@@ -11,7 +11,6 @@ class URLResponseErrorParserSpec: QuickSpec {
         
         describe(".parseResponse") {
             context("when urlResponse has status code on success range") {
-                
                 it("parses responses returning a nil") {
                     for statusCode in 200...299 {
                         let response = HTTPURLResponse(
@@ -30,7 +29,6 @@ class URLResponseErrorParserSpec: QuickSpec {
             
             context("when urlResponse has status code is below success range") {
                 it("parses responses returning .unkown") {
-
                         let response = HTTPURLResponse(
                             url: URL(string: "https://www.stub.com")!,
                             statusCode: 199,
@@ -46,7 +44,6 @@ class URLResponseErrorParserSpec: QuickSpec {
             
             context("when urlResponse has status code is above success range") {
                 it("parses responses returning .unkown") {
-
                         let response = HTTPURLResponse(
                             url: URL(string: "https://www.stub.com")!,
                             statusCode: 300,
