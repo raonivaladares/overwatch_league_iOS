@@ -5,7 +5,6 @@ import Foundation
 @testable import overwatch_league_iOS
 
 class URLResponseErrorParserSpec: QuickSpec {
-    
     override func spec() {
         let parser = URLResponseErrorParser()
         

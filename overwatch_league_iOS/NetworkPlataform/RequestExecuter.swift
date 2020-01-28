@@ -44,16 +44,16 @@ final class RequestExecuterImp: RequestExecuter {
                 completion(.failure(errorFromURLResponse))
                 return
             }
-            
-            
+        
             if let data = data {
                 print("--------------------------")
                 print("DATA")
                 print(data)
                 print("--------------------------")
+                completion(.success(data))
+            } else {
+                completion(.failure(.unkown))
             }
-            
-            completion(.failure(.unkown))
         }.resume()
     }
 }

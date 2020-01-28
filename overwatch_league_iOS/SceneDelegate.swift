@@ -29,15 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
             
-            let urlRquest = URLRequestBuilder(
-                action: WebServiceActions.GetStandings(),
-                configuration: OverwatchLeagueWebServiceConfiguration()
-            ).build()
             
-            RequestExecuterImp(urlSession: URLSession.shared).execute(
-                with: urlRquest!,
-                completion: {_ in }
-            )
         }
     }
 
