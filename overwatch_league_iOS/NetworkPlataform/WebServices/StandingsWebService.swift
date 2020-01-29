@@ -1,11 +1,11 @@
 import Foundation
 
 final class StandingsWebService {
-    private let actions: StandingsServiceActions
+    private let actions: StandingsServiceActionsFactory
     private let configuration: WebServiceConfiguration
     private let requestExecuter: RequestExecuter
     
-    init(actions: StandingsServiceActions,
+    init(actions: StandingsServiceActionsFactory,
         configuration: WebServiceConfiguration,
         requestExecuter: RequestExecuter) {
         
@@ -18,7 +18,7 @@ final class StandingsWebService {
         completion: @escaping (Result<StandingsResponse, NetworkPlataformError>) -> Void) {
         
         let urlRequest = URLRequestBuilder(
-            action: actions.getStandings,
+            action: actions.createGetStandings(),
             configuration: configuration
         ).build()
         

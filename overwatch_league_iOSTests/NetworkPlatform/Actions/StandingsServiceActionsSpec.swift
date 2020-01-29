@@ -5,7 +5,7 @@ import Nimble
 
 class StandingsServiceActionsSpec: QuickSpec {
     override func spec() {
-        let action = StandingsServiceActionsImp().getStandings
+        let action = StandingsServiceActionsFactoryImp().createGetStandings()
         
         describe("getStandings") {
             it("should has path propertie equal to expected") {

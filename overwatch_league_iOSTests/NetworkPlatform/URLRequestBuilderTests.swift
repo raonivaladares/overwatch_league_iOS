@@ -4,7 +4,7 @@ import XCTest
 class URLRequestBuilderTests: XCTestCase {
     func testBuildWithGetStandingsAndOVLConfiguration() {
         let urlRquest = URLRequestBuilder(
-            action: StandingsServiceActionsImp().getStandings,
+            action: StandingsServiceActionsFactoryImp().createGetStandings(),
             configuration: OverwatchLeagueWebServiceConfiguration()
         )
         .build()

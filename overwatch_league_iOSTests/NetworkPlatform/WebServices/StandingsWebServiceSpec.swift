@@ -6,14 +6,16 @@ import Foundation
 
 class StandingsWebServiceSpec: QuickSpec {
     override func spec() {
+        var standingsServiceActionsFactory: StandingsServiceActionsFactoryMock!
         let configurationStub = ConfigurationStub()
         var requestExecuterMock: RequestExecuterMock!
         var webService: StandingsWebService!
         
         beforeEach {
+            standingsServiceActionsFactory = StandingsServiceActionsFactoryMock()
             requestExecuterMock = RequestExecuterMock()
             webService = StandingsWebService(
-                actions: StandingsServiceActionsImp(),
+                actions: standingsServiceActionsFactory,
                 configuration: configurationStub,
                 requestExecuter: requestExecuterMock
             )
@@ -26,13 +28,12 @@ class StandingsWebServiceSpec: QuickSpec {
                 expect(requestExecuterMock.executeInvocations).to(equal(1))
             }
             
-            context("when configurations fail") {
-                fit("") {
-                    webService = StandingsWebService(
-                        actions: StandingsServiceActionsImp(),
-                        configuration: ConfigurationFailableStub(),
-                        requestExecuter: requestExecuterMock
-                    )
+            context("when a action can't generate a url") {
+                beforeEach {
+                    standingsServiceActionsFactory.expectedAction = .failableAction
+                }
+                
+                it("return an error") {
                     
                     var error: NetworkPlataformError?
                     
@@ -41,18 +42,33 @@ class StandingsWebServiceSpec: QuickSpec {
                             error = networkError
                         }
                     }
-                    //can`t make request error
-                    expect(error).toEventually(beNil())
+                    
+                    expect(error).toEventually(equal(NetworkPlataformError.unkown))
                 }
             }
             
             context("when request fails ????") {
+                beforeEach {
+                    requestExecuterMock.expectedResult = .failure(error: .unkown)
+                }
                 
+                it("") {
+                    var error: NetworkPlataformError?
+                    
+                    webService.fetchStandings { result in
+                        if case .failure(let networkError) = result {
+                            error = networkError
+                        }
+                    }
+                    
+                    expect(error).toEventually(equal(NetworkPlataformError.unkown))
+                }
             }
             
             context("when request execute with success and returns the correct model") {
                 it("") {
-                    let url = Bundle(for: StandingsWebServiceSpec.self).url(forResource: "StandingsResponseStub", withExtension: "json")
+                    let url = Bundle(for: StandingsWebServiceSpec.self)
+                        .url(forResource: "StandingsResponseStub", withExtension: "json")
                     let data = try! Data(contentsOf: url!)
                     
                     requestExecuterMock.expectedResult = .success(data: data)
@@ -68,7 +84,6 @@ class StandingsWebServiceSpec: QuickSpec {
                     expect(model).toEventuallyNot(beNil())
                 }
             }
-           
         }
     }
 }
@@ -76,11 +91,6 @@ class StandingsWebServiceSpec: QuickSpec {
 struct ConfigurationStub: WebServiceConfiguration {
     let scheme = "https"
     let host = "fake.api.com"
-}
-
-struct ConfigurationFailableStub: WebServiceConfiguration {
-    let scheme = "fake"
-    let host = "¶§∞§¶∞£™¢™¢£™``¡™£¢∞"
 }
 
 final class RequestExecuterMock: RequestExecuter {
@@ -105,3 +115,36 @@ final class RequestExecuterMock: RequestExecuter {
         }
     }
 }
+
+final class StandingsServiceActionsFactoryMock: StandingsServiceActionsFactory {
+    enum Action {
+        case action
+        case failableAction
+    }
+    
+    var expectedAction: Action = .action
+    
+    func createGetStandings() -> WebServiceAction {
+        let action: WebServiceAction
+        
+        switch expectedAction {
+        case .action:
+            action = ActionStub()
+        case .failableAction:
+            action = FailableActionStub()
+        }
+        
+        return action
+    }
+    
+    struct ActionStub: WebServiceAction {
+        var path = "/fake"
+        var method = HTTPMethod.get
+    }
+    
+    struct FailableActionStub: WebServiceAction {
+        var path = "fake"
+        var method = HTTPMethod.get
+    }
+}
+

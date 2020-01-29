@@ -2,13 +2,17 @@ struct WebServiceActions {
     private init() {}
 }
 
-protocol StandingsServiceActions {
-    var getStandings:  WebServiceAction { get }
+protocol StandingsServiceActionsFactory {
+    func createGetStandings() -> WebServiceAction
 }
 
-struct StandingsServiceActionsImp: StandingsServiceActions {
-    let getStandings: WebServiceAction = GetStandings()
-    
+struct StandingsServiceActionsFactoryImp: StandingsServiceActionsFactory {
+    func createGetStandings() -> WebServiceAction {
+        return GetStandings()
+    }
+}
+
+extension StandingsServiceActionsFactoryImp {
     struct GetStandings: WebServiceAction {
         let path = "/v2/standings"
         let method: HTTPMethod = .get
