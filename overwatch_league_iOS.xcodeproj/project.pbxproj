@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84000C27240BEDE40008EECC /* ConfigurationStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000C26240BEDE40008EECC /* ConfigurationStub.swift */; };
+		84000C29240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000C28240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift */; };
+		84000C2B240BEE910008EECC /* RequestExecuterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000C2A240BEE910008EECC /* RequestExecuterMock.swift */; };
 		843836DE23D7E9EC00584CE2 /* NetworkPlataformError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836DD23D7E9EC00584CE2 /* NetworkPlataformError.swift */; };
 		843836E023DCDD3A00584CE2 /* URLResponseErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836DF23DCDD3A00584CE2 /* URLResponseErrorParser.swift */; };
 		843836E223DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836E123DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift */; };
@@ -80,6 +83,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		84000C26240BEDE40008EECC /* ConfigurationStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStub.swift; sourceTree = "<group>"; };
+		84000C28240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsServiceActionsFactoryMock.swift; sourceTree = "<group>"; };
+		84000C2A240BEE910008EECC /* RequestExecuterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecuterMock.swift; sourceTree = "<group>"; };
 		843836DD23D7E9EC00584CE2 /* NetworkPlataformError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlataformError.swift; sourceTree = "<group>"; };
 		843836DF23DCDD3A00584CE2 /* URLResponseErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponseErrorParser.swift; sourceTree = "<group>"; };
 		843836E123DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponseErrorParserSpec.swift; sourceTree = "<group>"; };
@@ -154,6 +160,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84000C2C240BEF1D0008EECC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				84000C2A240BEE910008EECC /* RequestExecuterMock.swift */,
+				84000C26240BEDE40008EECC /* ConfigurationStub.swift */,
+				84000C28240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		843836E323DCE4A600584CE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +215,7 @@
 		8438370923DE303500584CE2 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				84000C2C240BEF1D0008EECC /* New Group */,
 				8438370E23DE687B00584CE2 /* Fixtures */,
 				8438370A23DE304900584CE2 /* StandingsWebServiceSpec.swift */,
 			);
@@ -499,6 +516,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84000C2B240BEE910008EECC /* RequestExecuterMock.swift in Sources */,
+				84000C27240BEDE40008EECC /* ConfigurationStub.swift in Sources */,
 				8438370B23DE304900584CE2 /* StandingsWebServiceSpec.swift in Sources */,
 				8485564023CA473100CACC76 /* HTTPMethodTests.swift in Sources */,
 				8485564823CA4B1E00CACC76 /* StandingsServiceActionsSpec.swift in Sources */,
@@ -506,6 +525,7 @@
 				8485561923CA3AF400CACC76 /* overwatch_league_iOSTests.swift in Sources */,
 				843836E223DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift in Sources */,
 				8485564A23CA4D4800CACC76 /* URLRequestBuilderTests.swift in Sources */,
+				84000C29240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

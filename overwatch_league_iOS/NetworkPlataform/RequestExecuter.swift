@@ -1,10 +1,8 @@
 import Foundation
+import Combine
 
 protocol RequestExecuter {
-    func execute(
-        with url: URLRequest,
-        completion: @escaping (Result<Data, NetworkPlataformError>) -> Void
-    )
+    func execute(with urlRquest: URLRequest) -> AnyPublisher<Data, NetworkPlataformError>
 }
 
 final class RequestExecuterImp: RequestExecuter {
@@ -14,46 +12,32 @@ final class RequestExecuterImp: RequestExecuter {
         self.urlSession = urlSession
     }
     
-    func execute(
-        with urlRquest: URLRequest,
-        completion: @escaping (Result<Data, NetworkPlataformError>) -> Void) {
-        
-        urlSession.dataTask(with: urlRquest) { data, urlResponse, error in
-            if let error = error {
-                print("--------------------------")
-                print("error")
-                print(error)
-                print("--------------------------")
+    func execute(with urlRquest: URLRequest) -> AnyPublisher<Data, NetworkPlataformError> {
+        return urlSession
+            .dataTaskPublisher(for: urlRquest)
+            .tryMap { data, response in
                 
-                completion(.failure(.unkown))
-            }
-            
-            guard let urlResponse = urlResponse  else {
-                completion(.failure(.unkown))
-                return
-            }
-            
-            print("--------------------------")
-            print("urlResponse")
-            print(urlResponse)
-            print("--------------------------")
-            
-            if let errorFromURLResponse = URLResponseErrorParser()
-                .parseErrorIfExists(on: urlResponse) {
-                
-                completion(.failure(errorFromURLResponse))
-                return
-            }
-        
-            if let data = data {
+                print("--------------------------")
+                print("urlResponse")
+                print(response)
+                print("--------------------------")
+                if let error = URLResponseErrorParser().parseErrorIfExists(on: response) {
+                    throw error
+                }
                 print("--------------------------")
                 print("DATA")
                 print(data)
                 print("--------------------------")
-                completion(.success(data))
-            } else {
-                completion(.failure(.unkown))
+                
+                return data
             }
-        }.resume()
+            .mapError { error in
+                print("--------------------------")
+                print("error maping")
+                print(error)
+                print("--------------------------")
+                return .unkown
+            }
+            .eraseToAnyPublisher()
     }
 }
