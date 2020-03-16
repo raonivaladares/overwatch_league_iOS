@@ -1,3 +1,3 @@
 struct StandingsResponse: Decodable {
-    let data: [StandingTeamNetwork]
+    let data: [StandingsTeamNetwork]
 }

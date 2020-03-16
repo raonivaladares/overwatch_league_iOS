@@ -15,7 +15,7 @@ final class StandsUseCases {
             .eraseToAnyPublisher()
     }
     
-    private func domainConverter(modelNetwork: StandingTeamNetwork) -> StandingsTeamDomain {
+    private func domainConverter(modelNetwork: StandingsTeamNetwork) -> StandingsTeamDomain {
         .init()
     }
     

@@ -1,4 +1,4 @@
-struct StandingTeamNetwork: Decodable {
+struct StandingsTeamNetwork: Decodable {
     let id: Int
     let divisionId: Int
     let name: String

@@ -1,3 +1,3 @@
-extension StandingTeamNetwork {
+extension StandingsTeamNetwork {
     struct Logo: Decodable {}
 }

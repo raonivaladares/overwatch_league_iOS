@@ -22,11 +22,11 @@
 		843836F323DD34D400584CE2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843836E823DCE4EB00584CE2 /* Quick.framework */; platformFilter = ios; };
 		843836F623DDB15300584CE2 /* StandingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836F523DDB15300584CE2 /* StandingsResponse.swift */; };
 		843836F923DE2A8B00584CE2 /* StandingsNetwork+Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836F823DE2A8B00584CE2 /* StandingsNetwork+Logo.swift */; };
-		843836FB23DE2AA700584CE2 /* StandingTeamNetwork+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836FA23DE2AA700584CE2 /* StandingTeamNetwork+Colors.swift */; };
-		843836FD23DE2AC700584CE2 /* StandingTeamNetwork+League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836FC23DE2AC700584CE2 /* StandingTeamNetwork+League.swift */; };
-		843836FF23DE2ADE00584CE2 /* StandingTeamNetwork+Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836FE23DE2ADE00584CE2 /* StandingTeamNetwork+Stages.swift */; };
-		8438370123DE2B1400584CE2 /* StandingTeamNetwork+Preseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438370023DE2B1400584CE2 /* StandingTeamNetwork+Preseason.swift */; };
-		8438370523DE2B7000584CE2 /* StandingTeamNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438370423DE2B7000584CE2 /* StandingTeamNetwork.swift */; };
+		843836FB23DE2AA700584CE2 /* StandingsTeamNetwork+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836FA23DE2AA700584CE2 /* StandingsTeamNetwork+Colors.swift */; };
+		843836FD23DE2AC700584CE2 /* StandingsTeamNetwork+League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836FC23DE2AC700584CE2 /* StandingsTeamNetwork+League.swift */; };
+		843836FF23DE2ADE00584CE2 /* StandingsTeamNetwork+Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836FE23DE2ADE00584CE2 /* StandingsTeamNetwork+Stages.swift */; };
+		8438370123DE2B1400584CE2 /* StandingsTeamNetwork+Preseason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438370023DE2B1400584CE2 /* StandingsTeamNetwork+Preseason.swift */; };
+		8438370523DE2B7000584CE2 /* StandingsTeamNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438370423DE2B7000584CE2 /* StandingsTeamNetwork.swift */; };
 		8438370823DE2C1D00584CE2 /* StandingsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438370723DE2C1D00584CE2 /* StandingsWebService.swift */; };
 		8438370B23DE304900584CE2 /* StandingsWebServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438370A23DE304900584CE2 /* StandingsWebServiceSpec.swift */; };
 		8438370D23DE37D700584CE2 /* StandingsResponseStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 8438370C23DE37D700584CE2 /* StandingsResponseStub.json */; };
@@ -98,11 +98,11 @@
 		843836E923DCE4EB00584CE2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		843836F523DDB15300584CE2 /* StandingsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsResponse.swift; sourceTree = "<group>"; };
 		843836F823DE2A8B00584CE2 /* StandingsNetwork+Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingsNetwork+Logo.swift"; sourceTree = "<group>"; };
-		843836FA23DE2AA700584CE2 /* StandingTeamNetwork+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingTeamNetwork+Colors.swift"; sourceTree = "<group>"; };
-		843836FC23DE2AC700584CE2 /* StandingTeamNetwork+League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingTeamNetwork+League.swift"; sourceTree = "<group>"; };
-		843836FE23DE2ADE00584CE2 /* StandingTeamNetwork+Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingTeamNetwork+Stages.swift"; sourceTree = "<group>"; };
-		8438370023DE2B1400584CE2 /* StandingTeamNetwork+Preseason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingTeamNetwork+Preseason.swift"; sourceTree = "<group>"; };
-		8438370423DE2B7000584CE2 /* StandingTeamNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingTeamNetwork.swift; sourceTree = "<group>"; };
+		843836FA23DE2AA700584CE2 /* StandingsTeamNetwork+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingsTeamNetwork+Colors.swift"; sourceTree = "<group>"; };
+		843836FC23DE2AC700584CE2 /* StandingsTeamNetwork+League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingsTeamNetwork+League.swift"; sourceTree = "<group>"; };
+		843836FE23DE2ADE00584CE2 /* StandingsTeamNetwork+Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingsTeamNetwork+Stages.swift"; sourceTree = "<group>"; };
+		8438370023DE2B1400584CE2 /* StandingsTeamNetwork+Preseason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StandingsTeamNetwork+Preseason.swift"; sourceTree = "<group>"; };
+		8438370423DE2B7000584CE2 /* StandingsTeamNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsTeamNetwork.swift; sourceTree = "<group>"; };
 		8438370723DE2C1D00584CE2 /* StandingsWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsWebService.swift; sourceTree = "<group>"; };
 		8438370A23DE304900584CE2 /* StandingsWebServiceSpec.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = StandingsWebServiceSpec.swift; sourceTree = "<group>"; };
 		8438370C23DE37D700584CE2 /* StandingsResponseStub.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = StandingsResponseStub.json; sourceTree = "<group>"; };
@@ -204,12 +204,12 @@
 			isa = PBXGroup;
 			children = (
 				843836F523DDB15300584CE2 /* StandingsResponse.swift */,
-				8438370423DE2B7000584CE2 /* StandingTeamNetwork.swift */,
+				8438370423DE2B7000584CE2 /* StandingsTeamNetwork.swift */,
 				843836F823DE2A8B00584CE2 /* StandingsNetwork+Logo.swift */,
-				843836FA23DE2AA700584CE2 /* StandingTeamNetwork+Colors.swift */,
-				843836FC23DE2AC700584CE2 /* StandingTeamNetwork+League.swift */,
-				843836FE23DE2ADE00584CE2 /* StandingTeamNetwork+Stages.swift */,
-				8438370023DE2B1400584CE2 /* StandingTeamNetwork+Preseason.swift */,
+				843836FA23DE2AA700584CE2 /* StandingsTeamNetwork+Colors.swift */,
+				843836FC23DE2AC700584CE2 /* StandingsTeamNetwork+League.swift */,
+				843836FE23DE2ADE00584CE2 /* StandingsTeamNetwork+Stages.swift */,
+				8438370023DE2B1400584CE2 /* StandingsTeamNetwork+Preseason.swift */,
 			);
 			path = Standings;
 			sourceTree = "<group>";
@@ -503,23 +503,23 @@
 				8485560223CA3AF200CACC76 /* AppDelegate.swift in Sources */,
 				84000C2F240BF72A0008EECC /* StandingsUseCases.swift in Sources */,
 				843836F923DE2A8B00584CE2 /* StandingsNetwork+Logo.swift in Sources */,
-				8438370123DE2B1400584CE2 /* StandingTeamNetwork+Preseason.swift in Sources */,
+				8438370123DE2B1400584CE2 /* StandingsTeamNetwork+Preseason.swift in Sources */,
 				8438370823DE2C1D00584CE2 /* StandingsWebService.swift in Sources */,
 				8485560423CA3AF200CACC76 /* SceneDelegate.swift in Sources */,
 				843836DE23D7E9EC00584CE2 /* NetworkPlataformError.swift in Sources */,
-				843836FD23DE2AC700584CE2 /* StandingTeamNetwork+League.swift in Sources */,
+				843836FD23DE2AC700584CE2 /* StandingsTeamNetwork+League.swift in Sources */,
 				8485564523CA4AAA00CACC76 /* WebServiceActions.swift in Sources */,
 				8485563C23CA444900CACC76 /* HTTPMethod.swift in Sources */,
 				8485560623CA3AF200CACC76 /* ContentView.swift in Sources */,
-				8438370523DE2B7000584CE2 /* StandingTeamNetwork.swift in Sources */,
-				843836FF23DE2ADE00584CE2 /* StandingTeamNetwork+Stages.swift in Sources */,
+				8438370523DE2B7000584CE2 /* StandingsTeamNetwork.swift in Sources */,
+				843836FF23DE2ADE00584CE2 /* StandingsTeamNetwork+Stages.swift in Sources */,
 				8485563A23CA43CF00CACC76 /* URLBuilder.swift in Sources */,
 				8485564C23CA587A00CACC76 /* RequestExecuter.swift in Sources */,
 				843836F623DDB15300584CE2 /* StandingsResponse.swift in Sources */,
 				843836E023DCDD3A00584CE2 /* URLResponseErrorParser.swift in Sources */,
 				8485563523CA3D3A00CACC76 /* OverwatchLeagueWebServiceConfiguration.swift in Sources */,
 				8485564323CA491200CACC76 /* WebServiceAction.swift in Sources */,
-				843836FB23DE2AA700584CE2 /* StandingTeamNetwork+Colors.swift in Sources */,
+				843836FB23DE2AA700584CE2 /* StandingsTeamNetwork+Colors.swift in Sources */,
 				8485563323CA3D0F00CACC76 /* WebServiceConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
