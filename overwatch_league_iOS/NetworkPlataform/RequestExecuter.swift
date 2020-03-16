@@ -21,9 +21,11 @@ final class RequestExecuterImp: RequestExecuter {
                 print("urlResponse")
                 print(response)
                 print("--------------------------")
+                
                 if let error = URLResponseErrorParser().parseErrorIfExists(on: response) {
                     throw error
                 }
+                
                 print("--------------------------")
                 print("DATA")
                 print(data)
@@ -31,13 +33,13 @@ final class RequestExecuterImp: RequestExecuter {
                 
                 return data
             }
-            .mapError { error in
-                print("--------------------------")
-                print("error maping")
-                print(error)
-                print("--------------------------")
-                return .unkown
-            }
+            .mapError(NetworkPlataformErrorParser().parse)
             .eraseToAnyPublisher()
+    }
+}
+
+final class NetworkPlataformErrorParser {
+    func parse(error: Error) -> NetworkPlataformError {
+        return .unkown
     }
 }

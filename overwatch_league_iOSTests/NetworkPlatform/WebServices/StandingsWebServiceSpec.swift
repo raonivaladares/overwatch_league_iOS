@@ -1,6 +1,7 @@
 import Quick
 import Nimble
 import Foundation
+import Combine
 
 @testable import overwatch_league_iOS
 
@@ -23,7 +24,7 @@ class StandingsWebServiceSpec: QuickSpec {
         
         describe(".fetchStandings") {
             it("calls requestExecuter.execute once") {
-                webService.fetchStandings { _ in }
+                _ = webService.fetchStandings()
                 
                 expect(requestExecuterMock.executeInvocations).to(equal(1))
             }
@@ -34,14 +35,17 @@ class StandingsWebServiceSpec: QuickSpec {
                 }
                 
                 it("return an error") {
-                    
                     var error: NetworkPlataformError?
                     
-                    webService.fetchStandings { result in
-                        if case .failure(let networkError) = result {
-                            error = networkError
-                        }
-                    }
+                    _ = webService.fetchStandings()
+                        .sink(receiveCompletion: { completion in
+                            switch completion {
+                            case .finished:
+                                break
+                            case .failure(let networkError):
+                                error = networkError
+                            }
+                        }, receiveValue: { _ in })
                     
                     expect(error).toEventually(equal(NetworkPlataformError.unkown))
                 }
@@ -55,11 +59,15 @@ class StandingsWebServiceSpec: QuickSpec {
                 it("should return an error from completion") {
                     var error: NetworkPlataformError?
                     
-                    webService.fetchStandings { result in
-                        if case .failure(let networkError) = result {
+                    _ = webService.fetchStandings()
+                    .sink(receiveCompletion: { completion in
+                        switch completion {
+                        case .finished:
+                            break
+                        case .failure(let networkError):
                             error = networkError
                         }
-                    }
+                    }, receiveValue: { _ in })
                     
                     expect(error).toEventually(equal(NetworkPlataformError.unkown))
                 }
@@ -75,11 +83,20 @@ class StandingsWebServiceSpec: QuickSpec {
                     
                     var model: StandingsResponse?
                     
-                    webService.fetchStandings { result in
-                        if case .success(let standingsResponse) = result {
-                            model = standingsResponse
-                        }
-                    }
+//                        { result in
+//                        if case .success(let standingsResponse) = result {
+//                            model = standingsResponse
+//                        }
+//                    }
+                    
+                    _ = webService.fetchStandings()
+                        .print()
+                        .sink(
+                            receiveCompletion: { _ in
+                                print("boi boi boi boi boi")
+                        }, receiveValue: { standingsResponse in
+                                model = standingsResponse
+                        })
                     
                     expect(model).toEventuallyNot(beNil())
                 }

@@ -10,6 +10,7 @@
 		84000C27240BEDE40008EECC /* ConfigurationStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000C26240BEDE40008EECC /* ConfigurationStub.swift */; };
 		84000C29240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000C28240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift */; };
 		84000C2B240BEE910008EECC /* RequestExecuterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000C2A240BEE910008EECC /* RequestExecuterMock.swift */; };
+		84000C2F240BF72A0008EECC /* StandingsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000C2E240BF72A0008EECC /* StandingsUseCases.swift */; };
 		843836DE23D7E9EC00584CE2 /* NetworkPlataformError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836DD23D7E9EC00584CE2 /* NetworkPlataformError.swift */; };
 		843836E023DCDD3A00584CE2 /* URLResponseErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836DF23DCDD3A00584CE2 /* URLResponseErrorParser.swift */; };
 		843836E223DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843836E123DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift */; };
@@ -86,6 +87,7 @@
 		84000C26240BEDE40008EECC /* ConfigurationStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStub.swift; sourceTree = "<group>"; };
 		84000C28240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsServiceActionsFactoryMock.swift; sourceTree = "<group>"; };
 		84000C2A240BEE910008EECC /* RequestExecuterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecuterMock.swift; sourceTree = "<group>"; };
+		84000C2E240BF72A0008EECC /* StandingsUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsUseCases.swift; sourceTree = "<group>"; };
 		843836DD23D7E9EC00584CE2 /* NetworkPlataformError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlataformError.swift; sourceTree = "<group>"; };
 		843836DF23DCDD3A00584CE2 /* URLResponseErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponseErrorParser.swift; sourceTree = "<group>"; };
 		843836E123DCDD7A00584CE2 /* URLResponseErrorParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponseErrorParserSpec.swift; sourceTree = "<group>"; };
@@ -168,6 +170,14 @@
 				84000C28240BEE680008EECC /* StandingsServiceActionsFactoryMock.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		84000C2D240BF3690008EECC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				84000C2E240BF72A0008EECC /* StandingsUseCases.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		843836E323DCE4A600584CE2 /* Frameworks */ = {
@@ -254,6 +264,7 @@
 		8485560023CA3AF200CACC76 /* overwatch_league_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				84000C2D240BF3690008EECC /* Domain */,
 				8485563123CA3C8100CACC76 /* NetworkPlataform */,
 				8485560123CA3AF200CACC76 /* AppDelegate.swift */,
 				8485560323CA3AF200CACC76 /* SceneDelegate.swift */,
@@ -490,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8485560223CA3AF200CACC76 /* AppDelegate.swift in Sources */,
+				84000C2F240BF72A0008EECC /* StandingsUseCases.swift in Sources */,
 				843836F923DE2A8B00584CE2 /* StandingsNetwork+Logo.swift in Sources */,
 				8438370123DE2B1400584CE2 /* StandingTeamNetwork+Preseason.swift in Sources */,
 				8438370823DE2C1D00584CE2 /* StandingsWebService.swift in Sources */,

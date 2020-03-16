@@ -8,11 +8,11 @@
 
 import UIKit
 import SwiftUI
-
+import Combine
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var anyFoo: AnyCancellable?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -31,6 +31,54 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             
         }
+        
+//        let configuration = OverwatchLeagueWebServiceConfiguration()
+//        
+//        let actionsFactory = StandingsServiceActionsFactoryImp()
+//        let urlSession = URLSession.shared
+//        let executer = RequestExecuterImp(urlSession: urlSession)
+//        
+//        let standingsWebService = StandingsWebService(
+//            actions: actionsFactory,
+//            configuration: configuration,
+//            requestExecuter: executer
+//        )
+//        
+//        standingsWebService.fetchStandings()
+//        
+//        let usecases = StandsUseCases(standingsWebService: standingsWebService)
+//        let foo = usecases.getStandings()
+//        
+//        
+//        
+//        
+//        
+//        let urlRequest = URLRequestBuilder(
+//            action: actionsFactory.createGetStandings(),
+//            configuration: configuration
+//        ).build()
+//        
+//        guard let request = urlRequest else {
+//            return
+//        }
+//        
+//        let publisher = executer.execute(with: request)
+//        
+//        anyFoo = publisher.sink(receiveCompletion: { subscribeCompletion in
+//            switch subscribeCompletion {
+//            case .failure(let error):
+//                print("sink error: \(error)")
+//            case .finished:
+//                print("sink fechou")
+//                break
+//                
+//            }
+//        }, receiveValue: { data in
+//            guard let standingsResponse = try? JSONDecoder()
+//                .decode(StandingsResponse.self, from: data) else {
+//                    return
+//            }
+//        })
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

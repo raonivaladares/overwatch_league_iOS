@@ -7,81 +7,42 @@ final class StandingsWebService {
     private let requestExecuter: RequestExecuter
     
     init(actions: StandingsServiceActionsFactory,
-        configuration: WebServiceConfiguration,
-        requestExecuter: RequestExecuter) {
+         configuration: WebServiceConfiguration,
+         requestExecuter: RequestExecuter) {
         
         self.actions = actions
         self.configuration = configuration
         self.requestExecuter = requestExecuter
     }
     
-    func fetchStandings(
-        completion: @escaping (Result<StandingsResponse, NetworkPlataformError>) -> Void) {
+    func fetchStandings() -> AnyPublisher<StandingsResponse, NetworkPlataformError> {
         
         let urlRequest = URLRequestBuilder(
             action: actions.createGetStandings(),
             configuration: configuration
         ).build()
         
+        
+        
         guard let request = urlRequest else {
-            completion(.failure(.unkown))
-            return
+            return Fail<StandingsResponse, NetworkPlataformError>(error: .unkown)
+            .eraseToAnyPublisher()
         }
         
-        let publisher = requestExecuter.execute(with: request)
-        
-        _ = publisher.sink(receiveCompletion: { subscribeCompletion in
-            switch subscribeCompletion {
-            case .failure(let error):
-                print("sink error: \(error)")
-                completion(.failure(error))
-            case .finished:
-                print("sink fechou")
-                break
-                
-            }
-        }, receiveValue: { data in
-            guard let standingsResponse = try? JSONDecoder()
-                .decode(StandingsResponse.self, from: data) else {
-                    completion(.failure(.unkown))
-                    return
+         return requestExecuter.execute(with: request)
+        .decode(type: StandingsResponse.self, decoder: JSONDecoder())
+        .mapError { error in
+            if let _ = error as? DecodingError {
+                return .unkown
             }
             
-            completion(.success(standingsResponse))
-            
-        })
-        
-//        requestExecuter.execute(with: request) { result in
-//            switch result {
-//            case .success(let data):
-//                guard let standingsResponse = try? JSONDecoder()
-//                    .decode(StandingsResponse.self, from: data) else {
-//                        completion(.failure(.unkown))
-//                        return
-//                }
-//
-//                completion(.success(standingsResponse))
-//
-//            case .failure(let error):
-//                completion(.failure(.unkown))
-//            }
-//        }
+            return error as? NetworkPlataformError ?? .unkown
+         }
+        .eraseToAnyPublisher()
     }
 }
 
-//final class StandingsSubscriber: Subscriber {
-//    typealias Input = Data
-//    typealias Failure = NetworkPlataformError
-//
-//    func receive(subscription: Subscription) {
-//        subscription.request(.unlimited)
-//    }
-//
-//    func receive(_ input: Data) -> Subscribers.Demand {
-//
-//    }
-//
-//    func receive(completion: Subscribers.Completion<NetworkPlataformError>) {
-//
-//    }
-//}
+//            return requestExecuter.execute(with: request)
+//                .tryMap { try JSONDecoder().decode(StandingsResponse.self, from: $0) }
+//                .mapError { _ in .unkown }
+//                .eraseToAnyPublisher()
